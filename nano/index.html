@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Commits Românticos 💖</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .card {
+      background: #111827;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 77, 109, 0.6);
+      max-width: 700px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+
+    .frase {
+      display: none;
+      font-size: 1.2rem;
+      margin: 15px 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff1e4d;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Commit 1 💌</h1>
+
+    <p class="frase">Hoje eu começo o projeto mais importante da minha vida.</p>
+    <p class="frase">Ele não tem prazo final.</p>
+    <p class="frase">Não tem rollback.</p>
+    <p class="frase">E nunca vai precisar de correção.</p>
+    <p class="frase">Porque amar você é o código mais perfeito que eu já escrevi.</p>
+
+    <button onclick="mostrarFrase()">Revelar 💖</button>
+  </div>
+
+  <script>
+    let index = 0;
+    const frases = document.querySelectorAll(".frase");
+
+    function mostrarFrase() {
+      if (index < frases.length) {
+        frases[index].style.display = "block";
+        index++;
+      } else {
+        document.querySelector("button").innerText = "Você já sabe que eu te amo infinito ❤️";
+      }
+    }
+  </script>
+</body>
+</html>
